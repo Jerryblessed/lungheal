@@ -1,36 +1,70 @@
-# Lung-Cancer-Detection-Web-App
-<!-- Lung Cancer Detection using RESNET-50 SGD Optimizer and integrated on web using React and Django. -->
-<!-- 🔬 ![Lung Cancer](link-to-lung-cancer-image) 🩺 -->
+# LungHeal - AI Histopathology Lung Cancer Detection Web App
 
-This project focuses on analyzing different stages of lung cancer using a dataset of 1400 lung cancer images sourced from Kaggle. By leveraging the power of deep learning, we have employed the ResNet-50 architecture with the SGD optimizer to enhance our system's detection capabilities. 💪🔍
+LungHeal is a web application that empowers doctors and patients to upload histopathology lung images and receive accurate AI-driven diagnoses using state-of-the-art deep learning models. 🧬✨
 
 ## Dataset
-📚 The dataset utilized in this project consists of 1400 carefully curated lung cancer images obtained from Kaggle. These images form the foundation for training our deep learning model, enabling us to accurately identify and classify different stages of lung cancer. 🖼️
+📚 We use the publicly available **Lung and Colon Cancer Histopathological Images Dataset** from Kaggle. This curated dataset enables precise model training across three diagnostic classes:
+- Benign
+- Malignant Squamous Cell Carcinoma
+- Malignant Adenocarcinoma
 
 ## Model Architecture
-🧠 To achieve superior performance in lung cancer detection, we have adopted the state-of-the-art ResNet-50 architecture. This deep convolutional neural network (CNN) model is widely recognized for its ability to extract intricate features from medical images, making it an ideal choice for our task. 🏥
+🤖 LungHeal introduces **three AI models** for image classification:
+- **MobileNetV2**
+- **DenseNet121**
+- **InceptionV3**
 
-## Training
-🎯 Our ResNet-50 model underwent extensive training using the lung cancer dataset, undergoing multiple iterations and fine-tuning processes. Our primary objective was to maximize the model's accuracy and robustness in classifying various stages of lung cancer, ensuring reliable and precise diagnosis results. 📈
+All models are in `.keras` format for better metadata handling and are available for users to select the most accurate result. This is a major improvement over legacy systems that only used `.h` format with ResNet.
 
-## Web Application
-🌐 For seamless accessibility, we have integrated the lung cancer analysis system into a user-friendly web application. This application combines the strengths of Django and React, providing users with a dynamic and interactive platform to upload lung cancer images and receive prompt analysis results. 🖥️💻
+## New Functionalities for Hackathon 🛠️
+- 🚀 Added support for **multi-model selection** with individual prediction outputs.
+- 🖼️ Support for **histopathology-based diagnosis** instead of standard X-rays.
+- 👨‍⚕️ Dual login system for **patients and doctors**.
+- 🌐 Intuitive UI built with **React** and backend powered by **Django**.
+
+## Web Application Flow
+1. User logs in (doctor or patient).
+2. Upload histopathology lung image.
+3. Select preferred AI model (MobileNetV2, DenseNet121, or InceptionV3).
+4. AI returns prediction: **Benign**, **Malignant Squamous**, or **Malignant Adenocarcinoma**.
 
 ## Technologies Used
-🔧⚙️
 - Python
-- Django
-- React
-- ResNet-50
-- SGD Optimizer
+- Django (Backend)
+- React (Frontend)
+- Keras (Model framework)
+- HTML/CSS
+- TensorFlow
 
 ## Getting Started
-🚀 To set up the Lung Cancer Analysis System locally, follow these steps:
+```bash
+# Clone the repository
+git clone https://github.com/jerryblessed/lungheal.git
+cd lungheal
 
-1. Clone this repository.
-2. Install the necessary dependencies using pip and npm.
-3. Configure your environment to run Django and React applications.
-4. Start the Django development server.
-5. Start the React development server.
-6. Access the web application through your preferred web browser. 🌐🔗
+# Install backend dependencies
+pip install -r requirements.txt
 
+# Run Django server
+python manage.py runserver
+
+# In another terminal, run frontend
+cd frontend
+npm install
+npm start
+```
+Visit `http://localhost:3000` to interact with the web app.
+
+## Prior Solutions vs LungHeal
+Traditional treatment included:
+- 💉 **Chemotherapy** – Uses strong drugs, often with severe side effects.
+- 🔪 **Surgery** – Removes tumors but isn’t always viable.
+- ☢️ **Radiation** – Risky and may affect healthy tissue.
+
+**LungHeal provides a non-invasive, accurate, and fast diagnosis option powered by AI.**
+
+## Quote That Inspires Us 💡
+> "It is health that is the real wealth and not pieces of gold and silver."
+
+---
+Made with ❤️ by **Team LungHeal** – Your AI partner for faster, safer lung cancer detection.
