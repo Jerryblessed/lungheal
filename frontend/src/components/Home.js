@@ -28,7 +28,7 @@ const Home =()=>
        
          <div class="container" >
           <div class="carousel-caption text-start text-primary">
-            <h1>LUNG CANCER DETECTION</h1>
+            <h1>LUNG HEAL</h1>
             {/* <p>welcome to kle Technological University</p> */}
             {/* <p><a id="card"  class="btn" href="#" onClick={notify}>Login</a></p> */}
           </div>
