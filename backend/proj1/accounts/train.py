@@ -8,7 +8,7 @@ import numpy as np
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 
 # Download and extract dataset (ensure the dataset URL is valid)
-url = "https://example.com/lung-cancer-dataset.zip"
+url = "https://www.kaggle.com/api/v1/datasets/download/andrewmvd/lung-and-colon-cancer-histopathological-images"
 dataset_path = "lung_cancer_dataset"
 zip_path = "dataset.zip"
 
